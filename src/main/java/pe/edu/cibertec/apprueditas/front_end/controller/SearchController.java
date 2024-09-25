@@ -45,6 +45,7 @@ public class SearchController {
             if(searchResponse.codigo().equals("00")) {
                 SearchModel searchModel = new SearchModel("00", "");
                 model.addAttribute("searchModel", searchModel);
+                model.addAttribute("searchResponse", searchResponse);
                 return "busqueda";
             }else {
                 SearchModel searchModel = new SearchModel("02", "Error: Busqueda fallida");
